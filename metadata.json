@@ -1,0 +1,5 @@
+{
+  "name": "School Administration System",
+  "description": "A web application for school administration, providing separate portals for students and administrators to manage student information, attendance, and more.",
+  "requestFramePermissions": []
+}
