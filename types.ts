@@ -1,10 +1,32 @@
+export interface Assignment {
+  id: string;
+  title: string;
+  description: string;
+  dueDate: string;
+  status: 'pending' | 'submitted';
+  resourceLink?: string | null;
+  submissionUrl?: string | null;
+  submissionName?: string | null;
+  submittedAt?: string | null;
+}
+
+export interface StudentMessage {
+  id: string;
+  title: string;
+  body: string;
+  createdAt: string;
+  sender: 'admin';
+}
 
 export interface Student {
   name: string;
   regNo: string;
-  attendance: number;
+  attendedClasses: number;
+  totalClasses: number;
   pendingAssignments: number;
   isBlocked: boolean;
+  assignments: Assignment[];
+  messages: StudentMessage[];
 }
 
 export interface Teacher {
